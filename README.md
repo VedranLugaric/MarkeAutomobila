@@ -22,6 +22,7 @@ Ovaj skup podataka sadrži informacije o markama automobila koji se nude na trž
 - **Opis atributa**:
   - `ID_proizvođač`: Jedinstveni identifikator svakog proizvođača
   - `Ime_proizvođač`: Ime proizvođača
+  - `Web_adresa`: URL na web stranicu porizvođača
   - `Godina_nastanka`: Godina osnivanja kompanije
   - `ID_model`: Jedinstveni identifikator svakog modela
   - `Model`: Naziv modela automobila

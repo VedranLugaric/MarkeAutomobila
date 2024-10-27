@@ -1,0 +1,11 @@
+_id,ID_proizvodjac,Ime_proizvodjac,Web_adresa,Godina_nastanka,model[0].ID_model,model[1].ID_model,model[0].Model,model[1].Model,model[0].Snaga,model[1].Snaga,model[0].Duljina,model[1].Duljina,model[0].Sirina,model[1].Sirina,model[0].Visina,model[1].Visina,model[0].Broj_sjedecih_mjesta,model[1].Broj_sjedecih_mjesta,model[0].Godina_proizvodnje,model[1].Godina_proizvodnje
+671cc2ae79501429377ec181,1,Toyota,https://www.toyota.com,1937,101,102,Corolla,Camry,132,203,4630,4880,1780,1840,1435,1445,5,5,2022,2023
+671cc2ae79501429377ec182,2,Honda,https://www.honda.com,1948,201,202,Civic,Accord,158,192,4670,4915,1790,1860,1430,1450,5,5,2021,2023
+671cc2ae79501429377ec183,3,Ford,https://www.ford.com,1903,301,302,Focus,Fusion,160,175,4378,4871,1823,1852,1495,1475,5,5,2020,2022
+671cc2ae79501429377ec184,4,Chevrolet,https://www.chevrolet.com,1911,401,402,Malibu,Impala,160,197,4933,5113,1855,1858,1462,1476,5,5,2019,2021
+671cc2ae79501429377ec185,5,Nissan,https://www.nissan.com,1933,501,502,Altima,Sentra,182,149,4900,4640,1850,1760,1450,1440,5,5,2022,2021
+671cc2ae79501429377ec186,6,BMW,https://www.bmw.com,1916,601,602,320i,X5,181,335,4709,4922,1827,2004,1444,1745,5,5,2020,2022
+671cc2ae79501429377ec187,7,Audi,https://www.audi.com,1909,701,702,A3,A6,184,335,4458,4939,1796,1885,1416,1457,5,5,2021,2023
+671cc2ae79501429377ec188,8,Mercedes-Benz,https://www.mercedes-benz.com,1926,801,802,C-Class,E-Class,255,362,4686,4933,1810,1852,1442,1457,5,5,2022,2023
+671cc2ae79501429377ec189,9,Volkswagen,https://www.volkswagen.com,1937,901,902,Golf,Passat,147,268,4284,4862,1782,1832,1456,1464,5,5,2020,2022
+671cc2ae79501429377ec190,10,Hyundai,https://www.hyundai.com,1967,1001,1002,Elantra,Sonata,147,191,4620,4900,1800,1860,1435,1460,5,5,2021,2023

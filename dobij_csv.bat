@@ -1,2 +1,0 @@
-docker exec mongo_baza mongoexport --db=MarkeAutomobila --collection=MarkeAutomobila --type=csv --fields _id,ID_proizvođac,Ime_proizvođac,Web_adresa,Godina_nastanka,modeli.0.ID_model,modeli.1.ID_model,modeli.0.Model,modeli.1.Model,modeli.0.Snaga,modeli.1.Snaga,modeli.0.Duljina,modeli.1.Duljina,modeli.0.Širina,modeli.1.Širina,modeli.0.Visina,modeli.1.Visina,modeli.0.Broj_sjedecih_mjesta,modeli.1.Broj_sjedecih_mjesta,modeli.0.Godina_proizvodnje,modeli.1.Godina_proizvodnje --out=/data/novi_csv.csv
-docker cp mongo_baza:/data/novi_csv.csv novi_csv.csv

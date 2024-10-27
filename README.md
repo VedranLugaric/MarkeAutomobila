@@ -1,4 +1,4 @@
-# MarkeAutomobila
+# Kolegij Otvoreno računarstvo
 
 # Skup podataka: Marke Automobila
 
@@ -6,20 +6,20 @@ Ovaj skup podataka sadrži informacije o markama automobila koji se nude na trž
 
 ## Metapodaci
 
-- **Licencija**: Creative Commons Attribution 4.0 International (CC BY 4.0)  
+## Licenca: Creative Commons Attribution 4.0 International (CC BY 4.0)  
   Ova licencija dopušta dijeljenje i prilagodbu podataka, uz obavezno navođenje izvora.
   
-- **Autor**: Vedran Lugarić
+## Autor: Vedran Lugarić
 
-- **Verzija**: 1.0
+## Verzija: 1.0
 
-- **Jezik**: Hrvatski
+## Jezik: Hrvatski
 
-- **Tema**: Marke Automobila
+## Tema: Marke Automobila
 
-- **Format datoteke**: CSV (Comma-Separated Values)
+## Format datoteke: CSV (Comma-Separated Values)
 
-- **Opis atributa**:
+## Opis atributa:
   - `ID_proizvođač`: Jedinstveni identifikator svakog proizvođača
   - `Ime_proizvođač`: Ime proizvođača
   - `Web_adresa`: URL na web stranicu porizvođača
@@ -33,11 +33,11 @@ Ovaj skup podataka sadrži informacije o markama automobila koji se nude na trž
   - `Broj_sjedećih_mjesta`: Broj sjedećih mjesta zapisanih prema registaciji automobila
   - `Godina_proizvodnje`: Godina proizvodnje pojedine modela
 
-- **Izvor podataka**: Kompanije autoindustrije
+## Izvor podataka: Kompanije autoindustrije
 
-- **Ažuriranja**: Podaci se ažuriraju na godišnjoj razini.
+## Ažuriranja: Podaci se ažuriraju na godišnjoj razini.
 
-- **Upotreba**: Skup podataka je pogodan za istraživanja, analize sigurnosti prometa i planiranje urbanih prometnih strategija.
+## Upotreba: Skup podataka je pogodan za istraživanja, analize sigurnosti prometa i planiranje urbanih prometnih strategija.
 
 ## Korištenje
 

@@ -1,0 +1,22 @@
+#version: '3.8'
+
+services:
+  mongodb:
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: mongo_baza
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: user
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: MarkeAutomobila
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+      - ./dump:/dump
+      - ./exports:/exports
+
+volumes:
+  mongo_data:
+    driver: local

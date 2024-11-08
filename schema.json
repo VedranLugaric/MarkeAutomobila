@@ -1,0 +1,1368 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "array",
+    "default": [],
+    "title": "Root Schema",
+    "items": {
+        "type": "object",
+        "title": "A Schema",
+        "required": [
+            "_id",
+            "ID_proizvodjac",
+            "Ime_proizvodjac",
+            "Web_adresa",
+            "Godina_nastanka",
+            "model"
+        ],
+        "properties": {
+            "_id": {
+                "type": "string",
+                "title": "The _id Schema",
+                "examples": [
+                    "671cc2ae79501429377ec181",
+                    "671cc2ae79501429377ec182",
+                    "671cc2ae79501429377ec183",
+                    "671cc2ae79501429377ec184",
+                    "671cc2ae79501429377ec185",
+                    "671cc2ae79501429377ec186",
+                    "671cc2ae79501429377ec187",
+                    "671cc2ae79501429377ec188",
+                    "671cc2ae79501429377ec189",
+                    "671cc2ae79501429377ec190"
+                ]
+            },
+            "ID_proizvodjac": {
+                "type": "integer",
+                "title": "The ID_proizvodjac Schema",
+                "examples": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10
+                ]
+            },
+            "Ime_proizvodjac": {
+                "type": "string",
+                "title": "The Ime_proizvodjac Schema",
+                "examples": [
+                    "Toyota",
+                    "Honda",
+                    "Ford",
+                    "Chevrolet",
+                    "Nissan",
+                    "BMW",
+                    "Audi",
+                    "Mercedes-Benz",
+                    "Volkswagen",
+                    "Hyundai"
+                ]
+            },
+            "Web_adresa": {
+                "type": "string",
+                "title": "The Web_adresa Schema",
+                "examples": [
+                    "https://www.toyota.com",
+                    "https://www.honda.com",
+                    "https://www.ford.com",
+                    "https://www.chevrolet.com",
+                    "https://www.nissan.com",
+                    "https://www.bmw.com",
+                    "https://www.audi.com",
+                    "https://www.mercedes-benz.com",
+                    "https://www.volkswagen.com",
+                    "https://www.hyundai.com"
+                ]
+            },
+            "Godina_nastanka": {
+                "type": "integer",
+                "title": "The Godina_nastanka Schema",
+                "examples": [
+                    1937,
+                    1948,
+                    1903,
+                    1911,
+                    1933,
+                    1916,
+                    1909,
+                    1926,
+                    1967
+                ]
+            },
+            "model": {
+                "type": "array",
+                "title": "The model Schema",
+                "items": {
+                    "type": "object",
+                    "title": "A Schema",
+                    "required": [
+                        "ID_model",
+                        "Model",
+                        "Snaga",
+                        "Duljina",
+                        "Sirina",
+                        "Visina",
+                        "Broj_sjedecih_mjesta",
+                        "Godina_proizvodnje"
+                    ],
+                    "properties": {
+                        "ID_model": {
+                            "type": "integer",
+                            "title": "The ID_model Schema",
+                            "examples": [
+                                101,
+                                102,
+                                201,
+                                202,
+                                301,
+                                302,
+                                401,
+                                402,
+                                501,
+                                502,
+                                601,
+                                602,
+                                701,
+                                702,
+                                801,
+                                802,
+                                901,
+                                902,
+                                1001,
+                                1002
+                            ]
+                        },
+                        "Model": {
+                            "type": "string",
+                            "title": "The Model Schema",
+                            "examples": [
+                                "Corolla",
+                                "Camry",
+                                "Civic",
+                                "Accord",
+                                "Focus",
+                                "Fusion",
+                                "Malibu",
+                                "Impala",
+                                "Altima",
+                                "Sentra",
+                                "320i",
+                                "X5",
+                                "A3",
+                                "A6",
+                                "C-Class",
+                                "E-Class",
+                                "Golf",
+                                "Passat",
+                                "Elantra",
+                                "Sonata"
+                            ]
+                        },
+                        "Snaga": {
+                            "type": "integer",
+                            "title": "The Snaga Schema",
+                            "examples": [
+                                132,
+                                203,
+                                158,
+                                192,
+                                160,
+                                175,
+                                197,
+                                182,
+                                149,
+                                181,
+                                335,
+                                184,
+                                255,
+                                362,
+                                147,
+                                268,
+                                191
+                            ]
+                        },
+                        "Duljina": {
+                            "type": "integer",
+                            "title": "The Duljina Schema",
+                            "examples": [
+                                4630,
+                                4880,
+                                4670,
+                                4915,
+                                4378,
+                                4871,
+                                4933,
+                                5113,
+                                4900,
+                                4640,
+                                4709,
+                                4922,
+                                4458,
+                                4939,
+                                4686,
+                                4284,
+                                4862,
+                                4620
+                            ]
+                        },
+                        "Sirina": {
+                            "type": "integer",
+                            "title": "The Sirina Schema",
+                            "examples": [
+                                1780,
+                                1840,
+                                1790,
+                                1860,
+                                1823,
+                                1852,
+                                1855,
+                                1858,
+                                1850,
+                                1760,
+                                1827,
+                                2004,
+                                1796,
+                                1885,
+                                1810,
+                                1782,
+                                1832,
+                                1800
+                            ]
+                        },
+                        "Visina": {
+                            "type": "integer",
+                            "title": "The Visina Schema",
+                            "examples": [
+                                1435,
+                                1445,
+                                1430,
+                                1450,
+                                1495,
+                                1475,
+                                1462,
+                                1476,
+                                1440,
+                                1444,
+                                1745,
+                                1416,
+                                1457,
+                                1442,
+                                1456,
+                                1464,
+                                1460
+                            ]
+                        },
+                        "Broj_sjedecih_mjesta": {
+                            "type": "integer",
+                            "title": "The Broj_sjedecih_mjesta Schema",
+                            "examples": [
+                                5
+                            ]
+                        },
+                        "Godina_proizvodnje": {
+                            "type": "integer",
+                            "title": "The Godina_proizvodnje Schema",
+                            "examples": [
+                                2022,
+                                2023,
+                                2021,
+                                2020,
+                                2019
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "ID_model": 101,
+                        "Model": "Corolla",
+                        "Snaga": 132,
+                        "Duljina": 4630,
+                        "Sirina": 1780,
+                        "Visina": 1435,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2022
+                    },
+                    {
+                        "ID_model": 102,
+                        "Model": "Camry",
+                        "Snaga": 203,
+                        "Duljina": 4880,
+                        "Sirina": 1840,
+                        "Visina": 1445,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2023
+                    },
+                    {
+                        "ID_model": 201,
+                        "Model": "Civic",
+                        "Snaga": 158,
+                        "Duljina": 4670,
+                        "Sirina": 1790,
+                        "Visina": 1430,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2021
+                    },
+                    {
+                        "ID_model": 202,
+                        "Model": "Accord",
+                        "Snaga": 192,
+                        "Duljina": 4915,
+                        "Sirina": 1860,
+                        "Visina": 1450,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2023
+                    },
+                    {
+                        "ID_model": 301,
+                        "Model": "Focus",
+                        "Snaga": 160,
+                        "Duljina": 4378,
+                        "Sirina": 1823,
+                        "Visina": 1495,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2020
+                    },
+                    {
+                        "ID_model": 302,
+                        "Model": "Fusion",
+                        "Snaga": 175,
+                        "Duljina": 4871,
+                        "Sirina": 1852,
+                        "Visina": 1475,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2022
+                    },
+                    {
+                        "ID_model": 401,
+                        "Model": "Malibu",
+                        "Snaga": 160,
+                        "Duljina": 4933,
+                        "Sirina": 1855,
+                        "Visina": 1462,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2019
+                    },
+                    {
+                        "ID_model": 402,
+                        "Model": "Impala",
+                        "Snaga": 197,
+                        "Duljina": 5113,
+                        "Sirina": 1858,
+                        "Visina": 1476,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2021
+                    },
+                    {
+                        "ID_model": 501,
+                        "Model": "Altima",
+                        "Snaga": 182,
+                        "Duljina": 4900,
+                        "Sirina": 1850,
+                        "Visina": 1450,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2022
+                    },
+                    {
+                        "ID_model": 502,
+                        "Model": "Sentra",
+                        "Snaga": 149,
+                        "Duljina": 4640,
+                        "Sirina": 1760,
+                        "Visina": 1440,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2021
+                    },
+                    {
+                        "ID_model": 601,
+                        "Model": "320i",
+                        "Snaga": 181,
+                        "Duljina": 4709,
+                        "Sirina": 1827,
+                        "Visina": 1444,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2020
+                    },
+                    {
+                        "ID_model": 602,
+                        "Model": "X5",
+                        "Snaga": 335,
+                        "Duljina": 4922,
+                        "Sirina": 2004,
+                        "Visina": 1745,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2022
+                    },
+                    {
+                        "ID_model": 701,
+                        "Model": "A3",
+                        "Snaga": 184,
+                        "Duljina": 4458,
+                        "Sirina": 1796,
+                        "Visina": 1416,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2021
+                    },
+                    {
+                        "ID_model": 702,
+                        "Model": "A6",
+                        "Snaga": 335,
+                        "Duljina": 4939,
+                        "Sirina": 1885,
+                        "Visina": 1457,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2023
+                    },
+                    {
+                        "ID_model": 801,
+                        "Model": "C-Class",
+                        "Snaga": 255,
+                        "Duljina": 4686,
+                        "Sirina": 1810,
+                        "Visina": 1442,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2022
+                    },
+                    {
+                        "ID_model": 802,
+                        "Model": "E-Class",
+                        "Snaga": 362,
+                        "Duljina": 4933,
+                        "Sirina": 1852,
+                        "Visina": 1457,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2023
+                    },
+                    {
+                        "ID_model": 901,
+                        "Model": "Golf",
+                        "Snaga": 147,
+                        "Duljina": 4284,
+                        "Sirina": 1782,
+                        "Visina": 1456,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2020
+                    },
+                    {
+                        "ID_model": 902,
+                        "Model": "Passat",
+                        "Snaga": 268,
+                        "Duljina": 4862,
+                        "Sirina": 1832,
+                        "Visina": 1464,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2022
+                    },
+                    {
+                        "ID_model": 1001,
+                        "Model": "Elantra",
+                        "Snaga": 147,
+                        "Duljina": 4620,
+                        "Sirina": 1800,
+                        "Visina": 1435,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2021
+                    },
+                    {
+                        "ID_model": 1002,
+                        "Model": "Sonata",
+                        "Snaga": 191,
+                        "Duljina": 4900,
+                        "Sirina": 1860,
+                        "Visina": 1460,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2023
+                    }]
+                },
+                "examples": [
+                    [{
+                        "ID_model": 101,
+                        "Model": "Corolla",
+                        "Snaga": 132,
+                        "Duljina": 4630,
+                        "Sirina": 1780,
+                        "Visina": 1435,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2022
+                    }],
+                    [{
+                        "ID_model": 102,
+                        "Model": "Camry",
+                        "Snaga": 203,
+                        "Duljina": 4880,
+                        "Sirina": 1840,
+                        "Visina": 1445,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2023
+                    }],
+                    [{
+                        "ID_model": 201,
+                        "Model": "Civic",
+                        "Snaga": 158,
+                        "Duljina": 4670,
+                        "Sirina": 1790,
+                        "Visina": 1430,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2021
+                    }],
+                    [{
+                        "ID_model": 202,
+                        "Model": "Accord",
+                        "Snaga": 192,
+                        "Duljina": 4915,
+                        "Sirina": 1860,
+                        "Visina": 1450,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2023
+                    }],
+                    [{
+                        "ID_model": 301,
+                        "Model": "Focus",
+                        "Snaga": 160,
+                        "Duljina": 4378,
+                        "Sirina": 1823,
+                        "Visina": 1495,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2020
+                    }],
+                    [{
+                        "ID_model": 302,
+                        "Model": "Fusion",
+                        "Snaga": 175,
+                        "Duljina": 4871,
+                        "Sirina": 1852,
+                        "Visina": 1475,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2022
+                    }],
+                    [{
+                        "ID_model": 401,
+                        "Model": "Malibu",
+                        "Snaga": 160,
+                        "Duljina": 4933,
+                        "Sirina": 1855,
+                        "Visina": 1462,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2019
+                    }],
+                    [{
+                        "ID_model": 402,
+                        "Model": "Impala",
+                        "Snaga": 197,
+                        "Duljina": 5113,
+                        "Sirina": 1858,
+                        "Visina": 1476,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2021
+                    }],
+                    [{
+                        "ID_model": 501,
+                        "Model": "Altima",
+                        "Snaga": 182,
+                        "Duljina": 4900,
+                        "Sirina": 1850,
+                        "Visina": 1450,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2022
+                    }],
+                    [{
+                        "ID_model": 502,
+                        "Model": "Sentra",
+                        "Snaga": 149,
+                        "Duljina": 4640,
+                        "Sirina": 1760,
+                        "Visina": 1440,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2021
+                    }],
+                    [{
+                        "ID_model": 601,
+                        "Model": "320i",
+                        "Snaga": 181,
+                        "Duljina": 4709,
+                        "Sirina": 1827,
+                        "Visina": 1444,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2020
+                    }],
+                    [{
+                        "ID_model": 602,
+                        "Model": "X5",
+                        "Snaga": 335,
+                        "Duljina": 4922,
+                        "Sirina": 2004,
+                        "Visina": 1745,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2022
+                    }],
+                    [{
+                        "ID_model": 701,
+                        "Model": "A3",
+                        "Snaga": 184,
+                        "Duljina": 4458,
+                        "Sirina": 1796,
+                        "Visina": 1416,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2021
+                    }],
+                    [{
+                        "ID_model": 702,
+                        "Model": "A6",
+                        "Snaga": 335,
+                        "Duljina": 4939,
+                        "Sirina": 1885,
+                        "Visina": 1457,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2023
+                    }],
+                    [{
+                        "ID_model": 801,
+                        "Model": "C-Class",
+                        "Snaga": 255,
+                        "Duljina": 4686,
+                        "Sirina": 1810,
+                        "Visina": 1442,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2022
+                    }],
+                    [{
+                        "ID_model": 802,
+                        "Model": "E-Class",
+                        "Snaga": 362,
+                        "Duljina": 4933,
+                        "Sirina": 1852,
+                        "Visina": 1457,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2023
+                    }],
+                    [{
+                        "ID_model": 901,
+                        "Model": "Golf",
+                        "Snaga": 147,
+                        "Duljina": 4284,
+                        "Sirina": 1782,
+                        "Visina": 1456,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2020
+                    }],
+                    [{
+                        "ID_model": 902,
+                        "Model": "Passat",
+                        "Snaga": 268,
+                        "Duljina": 4862,
+                        "Sirina": 1832,
+                        "Visina": 1464,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2022
+                    }],
+                    [{
+                        "ID_model": 1001,
+                        "Model": "Elantra",
+                        "Snaga": 147,
+                        "Duljina": 4620,
+                        "Sirina": 1800,
+                        "Visina": 1435,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2021
+                    }],
+                    [{
+                        "ID_model": 1002,
+                        "Model": "Sonata",
+                        "Snaga": 191,
+                        "Duljina": 4900,
+                        "Sirina": 1860,
+                        "Visina": 1460,
+                        "Broj_sjedecih_mjesta": 5,
+                        "Godina_proizvodnje": 2023
+                    }]
+                ]
+            }
+        },
+        "examples": [{
+            "_id": "671cc2ae79501429377ec181",
+            "ID_proizvodjac": 1,
+            "Ime_proizvodjac": "Toyota",
+            "Web_adresa": "https://www.toyota.com",
+            "Godina_nastanka": 1937,
+            "model": [{
+                "ID_model": 101,
+                "Model": "Corolla",
+                "Snaga": 132,
+                "Duljina": 4630,
+                "Sirina": 1780,
+                "Visina": 1435,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2022
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec181",
+            "ID_proizvodjac": 1,
+            "Ime_proizvodjac": "Toyota",
+            "Web_adresa": "https://www.toyota.com",
+            "Godina_nastanka": 1937,
+            "model": [{
+                "ID_model": 102,
+                "Model": "Camry",
+                "Snaga": 203,
+                "Duljina": 4880,
+                "Sirina": 1840,
+                "Visina": 1445,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2023
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec182",
+            "ID_proizvodjac": 2,
+            "Ime_proizvodjac": "Honda",
+            "Web_adresa": "https://www.honda.com",
+            "Godina_nastanka": 1948,
+            "model": [{
+                "ID_model": 201,
+                "Model": "Civic",
+                "Snaga": 158,
+                "Duljina": 4670,
+                "Sirina": 1790,
+                "Visina": 1430,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2021
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec182",
+            "ID_proizvodjac": 2,
+            "Ime_proizvodjac": "Honda",
+            "Web_adresa": "https://www.honda.com",
+            "Godina_nastanka": 1948,
+            "model": [{
+                "ID_model": 202,
+                "Model": "Accord",
+                "Snaga": 192,
+                "Duljina": 4915,
+                "Sirina": 1860,
+                "Visina": 1450,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2023
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec183",
+            "ID_proizvodjac": 3,
+            "Ime_proizvodjac": "Ford",
+            "Web_adresa": "https://www.ford.com",
+            "Godina_nastanka": 1903,
+            "model": [{
+                "ID_model": 301,
+                "Model": "Focus",
+                "Snaga": 160,
+                "Duljina": 4378,
+                "Sirina": 1823,
+                "Visina": 1495,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2020
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec183",
+            "ID_proizvodjac": 3,
+            "Ime_proizvodjac": "Ford",
+            "Web_adresa": "https://www.ford.com",
+            "Godina_nastanka": 1903,
+            "model": [{
+                "ID_model": 302,
+                "Model": "Fusion",
+                "Snaga": 175,
+                "Duljina": 4871,
+                "Sirina": 1852,
+                "Visina": 1475,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2022
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec184",
+            "ID_proizvodjac": 4,
+            "Ime_proizvodjac": "Chevrolet",
+            "Web_adresa": "https://www.chevrolet.com",
+            "Godina_nastanka": 1911,
+            "model": [{
+                "ID_model": 401,
+                "Model": "Malibu",
+                "Snaga": 160,
+                "Duljina": 4933,
+                "Sirina": 1855,
+                "Visina": 1462,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2019
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec184",
+            "ID_proizvodjac": 4,
+            "Ime_proizvodjac": "Chevrolet",
+            "Web_adresa": "https://www.chevrolet.com",
+            "Godina_nastanka": 1911,
+            "model": [{
+                "ID_model": 402,
+                "Model": "Impala",
+                "Snaga": 197,
+                "Duljina": 5113,
+                "Sirina": 1858,
+                "Visina": 1476,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2021
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec185",
+            "ID_proizvodjac": 5,
+            "Ime_proizvodjac": "Nissan",
+            "Web_adresa": "https://www.nissan.com",
+            "Godina_nastanka": 1933,
+            "model": [{
+                "ID_model": 501,
+                "Model": "Altima",
+                "Snaga": 182,
+                "Duljina": 4900,
+                "Sirina": 1850,
+                "Visina": 1450,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2022
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec185",
+            "ID_proizvodjac": 5,
+            "Ime_proizvodjac": "Nissan",
+            "Web_adresa": "https://www.nissan.com",
+            "Godina_nastanka": 1933,
+            "model": [{
+                "ID_model": 502,
+                "Model": "Sentra",
+                "Snaga": 149,
+                "Duljina": 4640,
+                "Sirina": 1760,
+                "Visina": 1440,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2021
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec186",
+            "ID_proizvodjac": 6,
+            "Ime_proizvodjac": "BMW",
+            "Web_adresa": "https://www.bmw.com",
+            "Godina_nastanka": 1916,
+            "model": [{
+                "ID_model": 601,
+                "Model": "320i",
+                "Snaga": 181,
+                "Duljina": 4709,
+                "Sirina": 1827,
+                "Visina": 1444,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2020
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec186",
+            "ID_proizvodjac": 6,
+            "Ime_proizvodjac": "BMW",
+            "Web_adresa": "https://www.bmw.com",
+            "Godina_nastanka": 1916,
+            "model": [{
+                "ID_model": 602,
+                "Model": "X5",
+                "Snaga": 335,
+                "Duljina": 4922,
+                "Sirina": 2004,
+                "Visina": 1745,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2022
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec187",
+            "ID_proizvodjac": 7,
+            "Ime_proizvodjac": "Audi",
+            "Web_adresa": "https://www.audi.com",
+            "Godina_nastanka": 1909,
+            "model": [{
+                "ID_model": 701,
+                "Model": "A3",
+                "Snaga": 184,
+                "Duljina": 4458,
+                "Sirina": 1796,
+                "Visina": 1416,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2021
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec187",
+            "ID_proizvodjac": 7,
+            "Ime_proizvodjac": "Audi",
+            "Web_adresa": "https://www.audi.com",
+            "Godina_nastanka": 1909,
+            "model": [{
+                "ID_model": 702,
+                "Model": "A6",
+                "Snaga": 335,
+                "Duljina": 4939,
+                "Sirina": 1885,
+                "Visina": 1457,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2023
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec188",
+            "ID_proizvodjac": 8,
+            "Ime_proizvodjac": "Mercedes-Benz",
+            "Web_adresa": "https://www.mercedes-benz.com",
+            "Godina_nastanka": 1926,
+            "model": [{
+                "ID_model": 801,
+                "Model": "C-Class",
+                "Snaga": 255,
+                "Duljina": 4686,
+                "Sirina": 1810,
+                "Visina": 1442,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2022
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec188",
+            "ID_proizvodjac": 8,
+            "Ime_proizvodjac": "Mercedes-Benz",
+            "Web_adresa": "https://www.mercedes-benz.com",
+            "Godina_nastanka": 1926,
+            "model": [{
+                "ID_model": 802,
+                "Model": "E-Class",
+                "Snaga": 362,
+                "Duljina": 4933,
+                "Sirina": 1852,
+                "Visina": 1457,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2023
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec189",
+            "ID_proizvodjac": 9,
+            "Ime_proizvodjac": "Volkswagen",
+            "Web_adresa": "https://www.volkswagen.com",
+            "Godina_nastanka": 1937,
+            "model": [{
+                "ID_model": 901,
+                "Model": "Golf",
+                "Snaga": 147,
+                "Duljina": 4284,
+                "Sirina": 1782,
+                "Visina": 1456,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2020
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec189",
+            "ID_proizvodjac": 9,
+            "Ime_proizvodjac": "Volkswagen",
+            "Web_adresa": "https://www.volkswagen.com",
+            "Godina_nastanka": 1937,
+            "model": [{
+                "ID_model": 902,
+                "Model": "Passat",
+                "Snaga": 268,
+                "Duljina": 4862,
+                "Sirina": 1832,
+                "Visina": 1464,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2022
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec190",
+            "ID_proizvodjac": 10,
+            "Ime_proizvodjac": "Hyundai",
+            "Web_adresa": "https://www.hyundai.com",
+            "Godina_nastanka": 1967,
+            "model": [{
+                "ID_model": 1001,
+                "Model": "Elantra",
+                "Snaga": 147,
+                "Duljina": 4620,
+                "Sirina": 1800,
+                "Visina": 1435,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2021
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec190",
+            "ID_proizvodjac": 10,
+            "Ime_proizvodjac": "Hyundai",
+            "Web_adresa": "https://www.hyundai.com",
+            "Godina_nastanka": 1967,
+            "model": [{
+                "ID_model": 1002,
+                "Model": "Sonata",
+                "Snaga": 191,
+                "Duljina": 4900,
+                "Sirina": 1860,
+                "Visina": 1460,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2023
+            }]
+        }]
+    },
+    "examples": [
+        [{
+            "_id": "671cc2ae79501429377ec181",
+            "ID_proizvodjac": 1,
+            "Ime_proizvodjac": "Toyota",
+            "Web_adresa": "https://www.toyota.com",
+            "Godina_nastanka": 1937,
+            "model": [{
+                "ID_model": 101,
+                "Model": "Corolla",
+                "Snaga": 132,
+                "Duljina": 4630,
+                "Sirina": 1780,
+                "Visina": 1435,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2022
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec181",
+            "ID_proizvodjac": 1,
+            "Ime_proizvodjac": "Toyota",
+            "Web_adresa": "https://www.toyota.com",
+            "Godina_nastanka": 1937,
+            "model": [{
+                "ID_model": 102,
+                "Model": "Camry",
+                "Snaga": 203,
+                "Duljina": 4880,
+                "Sirina": 1840,
+                "Visina": 1445,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2023
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec182",
+            "ID_proizvodjac": 2,
+            "Ime_proizvodjac": "Honda",
+            "Web_adresa": "https://www.honda.com",
+            "Godina_nastanka": 1948,
+            "model": [{
+                "ID_model": 201,
+                "Model": "Civic",
+                "Snaga": 158,
+                "Duljina": 4670,
+                "Sirina": 1790,
+                "Visina": 1430,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2021
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec182",
+            "ID_proizvodjac": 2,
+            "Ime_proizvodjac": "Honda",
+            "Web_adresa": "https://www.honda.com",
+            "Godina_nastanka": 1948,
+            "model": [{
+                "ID_model": 202,
+                "Model": "Accord",
+                "Snaga": 192,
+                "Duljina": 4915,
+                "Sirina": 1860,
+                "Visina": 1450,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2023
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec183",
+            "ID_proizvodjac": 3,
+            "Ime_proizvodjac": "Ford",
+            "Web_adresa": "https://www.ford.com",
+            "Godina_nastanka": 1903,
+            "model": [{
+                "ID_model": 301,
+                "Model": "Focus",
+                "Snaga": 160,
+                "Duljina": 4378,
+                "Sirina": 1823,
+                "Visina": 1495,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2020
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec183",
+            "ID_proizvodjac": 3,
+            "Ime_proizvodjac": "Ford",
+            "Web_adresa": "https://www.ford.com",
+            "Godina_nastanka": 1903,
+            "model": [{
+                "ID_model": 302,
+                "Model": "Fusion",
+                "Snaga": 175,
+                "Duljina": 4871,
+                "Sirina": 1852,
+                "Visina": 1475,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2022
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec184",
+            "ID_proizvodjac": 4,
+            "Ime_proizvodjac": "Chevrolet",
+            "Web_adresa": "https://www.chevrolet.com",
+            "Godina_nastanka": 1911,
+            "model": [{
+                "ID_model": 401,
+                "Model": "Malibu",
+                "Snaga": 160,
+                "Duljina": 4933,
+                "Sirina": 1855,
+                "Visina": 1462,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2019
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec184",
+            "ID_proizvodjac": 4,
+            "Ime_proizvodjac": "Chevrolet",
+            "Web_adresa": "https://www.chevrolet.com",
+            "Godina_nastanka": 1911,
+            "model": [{
+                "ID_model": 402,
+                "Model": "Impala",
+                "Snaga": 197,
+                "Duljina": 5113,
+                "Sirina": 1858,
+                "Visina": 1476,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2021
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec185",
+            "ID_proizvodjac": 5,
+            "Ime_proizvodjac": "Nissan",
+            "Web_adresa": "https://www.nissan.com",
+            "Godina_nastanka": 1933,
+            "model": [{
+                "ID_model": 501,
+                "Model": "Altima",
+                "Snaga": 182,
+                "Duljina": 4900,
+                "Sirina": 1850,
+                "Visina": 1450,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2022
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec185",
+            "ID_proizvodjac": 5,
+            "Ime_proizvodjac": "Nissan",
+            "Web_adresa": "https://www.nissan.com",
+            "Godina_nastanka": 1933,
+            "model": [{
+                "ID_model": 502,
+                "Model": "Sentra",
+                "Snaga": 149,
+                "Duljina": 4640,
+                "Sirina": 1760,
+                "Visina": 1440,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2021
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec186",
+            "ID_proizvodjac": 6,
+            "Ime_proizvodjac": "BMW",
+            "Web_adresa": "https://www.bmw.com",
+            "Godina_nastanka": 1916,
+            "model": [{
+                "ID_model": 601,
+                "Model": "320i",
+                "Snaga": 181,
+                "Duljina": 4709,
+                "Sirina": 1827,
+                "Visina": 1444,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2020
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec186",
+            "ID_proizvodjac": 6,
+            "Ime_proizvodjac": "BMW",
+            "Web_adresa": "https://www.bmw.com",
+            "Godina_nastanka": 1916,
+            "model": [{
+                "ID_model": 602,
+                "Model": "X5",
+                "Snaga": 335,
+                "Duljina": 4922,
+                "Sirina": 2004,
+                "Visina": 1745,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2022
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec187",
+            "ID_proizvodjac": 7,
+            "Ime_proizvodjac": "Audi",
+            "Web_adresa": "https://www.audi.com",
+            "Godina_nastanka": 1909,
+            "model": [{
+                "ID_model": 701,
+                "Model": "A3",
+                "Snaga": 184,
+                "Duljina": 4458,
+                "Sirina": 1796,
+                "Visina": 1416,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2021
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec187",
+            "ID_proizvodjac": 7,
+            "Ime_proizvodjac": "Audi",
+            "Web_adresa": "https://www.audi.com",
+            "Godina_nastanka": 1909,
+            "model": [{
+                "ID_model": 702,
+                "Model": "A6",
+                "Snaga": 335,
+                "Duljina": 4939,
+                "Sirina": 1885,
+                "Visina": 1457,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2023
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec188",
+            "ID_proizvodjac": 8,
+            "Ime_proizvodjac": "Mercedes-Benz",
+            "Web_adresa": "https://www.mercedes-benz.com",
+            "Godina_nastanka": 1926,
+            "model": [{
+                "ID_model": 801,
+                "Model": "C-Class",
+                "Snaga": 255,
+                "Duljina": 4686,
+                "Sirina": 1810,
+                "Visina": 1442,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2022
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec188",
+            "ID_proizvodjac": 8,
+            "Ime_proizvodjac": "Mercedes-Benz",
+            "Web_adresa": "https://www.mercedes-benz.com",
+            "Godina_nastanka": 1926,
+            "model": [{
+                "ID_model": 802,
+                "Model": "E-Class",
+                "Snaga": 362,
+                "Duljina": 4933,
+                "Sirina": 1852,
+                "Visina": 1457,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2023
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec189",
+            "ID_proizvodjac": 9,
+            "Ime_proizvodjac": "Volkswagen",
+            "Web_adresa": "https://www.volkswagen.com",
+            "Godina_nastanka": 1937,
+            "model": [{
+                "ID_model": 901,
+                "Model": "Golf",
+                "Snaga": 147,
+                "Duljina": 4284,
+                "Sirina": 1782,
+                "Visina": 1456,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2020
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec189",
+            "ID_proizvodjac": 9,
+            "Ime_proizvodjac": "Volkswagen",
+            "Web_adresa": "https://www.volkswagen.com",
+            "Godina_nastanka": 1937,
+            "model": [{
+                "ID_model": 902,
+                "Model": "Passat",
+                "Snaga": 268,
+                "Duljina": 4862,
+                "Sirina": 1832,
+                "Visina": 1464,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2022
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec190",
+            "ID_proizvodjac": 10,
+            "Ime_proizvodjac": "Hyundai",
+            "Web_adresa": "https://www.hyundai.com",
+            "Godina_nastanka": 1967,
+            "model": [{
+                "ID_model": 1001,
+                "Model": "Elantra",
+                "Snaga": 147,
+                "Duljina": 4620,
+                "Sirina": 1800,
+                "Visina": 1435,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2021
+            }]
+        },
+        {
+            "_id": "671cc2ae79501429377ec190",
+            "ID_proizvodjac": 10,
+            "Ime_proizvodjac": "Hyundai",
+            "Web_adresa": "https://www.hyundai.com",
+            "Godina_nastanka": 1967,
+            "model": [{
+                "ID_model": 1002,
+                "Model": "Sonata",
+                "Snaga": 191,
+                "Duljina": 4900,
+                "Sirina": 1860,
+                "Visina": 1460,
+                "Broj_sjedecih_mjesta": 5,
+                "Godina_proizvodnje": 2023
+            }]
+        }]
+    ]
+}

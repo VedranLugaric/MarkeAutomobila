@@ -1,4 +1,4 @@
-#version: '3.8'
+
 
 services:
   mongodb:
@@ -16,6 +16,37 @@ services:
       - mongo_data:/data/db
       - ./dump:/dump
       - ./exports:/exports
+    networks:
+      - app-network
+
+  backend:
+    build:
+      context: ./cars_backend  # Assuming your backend code is in the 'backend' folder
+    container_name: backend
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/mydb  # Adjust for your MongoDB connection
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+    depends_on:
+      - mongodb
+
+  # Frontend Service (Flutter Web App)
+  frontend:
+    build:
+      context: ./cars_frontend  # Assuming your Flutter web code is in the 'frontend' folder
+    container_name: frontend
+    ports:
+      - "80:80"
+    networks:
+      - app-network
+    depends_on:
+      - backend
+
+networks:
+  app-network:
+    driver: bridge
 
 volumes:
   mongo_data:

@@ -1,0 +1,32 @@
+# Use a specific version of Flutter with Dart 3.x
+FROM dart:stable AS build
+
+# Set up Flutter SDK (make sure it matches the required Dart SDK version)
+RUN git clone https://github.com/flutter/flutter.git -b stable /flutter
+
+# Add flutter to PATH
+ENV PATH="/flutter/bin:/flutter/bin/cache/dart-sdk/bin:$PATH"
+
+# Set the working directory to /app
+WORKDIR /app
+
+# Copy the Flutter project into the container
+COPY . .
+
+# Get Flutter dependencies
+RUN flutter pub get
+
+# Build the Flutter web app
+RUN flutter build web
+
+# Use Nginx to serve the app
+FROM nginx:alpine
+
+# Copy the build output to the nginx directory
+COPY --from=build /app/build/web /usr/share/nginx/html
+
+# Expose port 80
+EXPOSE 80
+
+# Start Nginx
+CMD ["nginx", "-g", "daemon off;"]

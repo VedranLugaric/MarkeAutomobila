@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:cars_frontend/model/cars.dart';
 
-class LibraryDataTable extends StatelessWidget {
+class CarsDataTable extends StatelessWidget {
   final List<Library> libraries;
 
-  const LibraryDataTable({super.key, required this.libraries});
+  const CarsDataTable({super.key, required this.libraries});
 
   @override
   Widget build(BuildContext context) {

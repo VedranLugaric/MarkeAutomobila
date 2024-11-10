@@ -5,14 +5,14 @@ import 'package:cars_frontend/di.dart';
 import 'dart:html' as html;
 
 
-class LibraryFilter extends ConsumerStatefulWidget {
-  const LibraryFilter({super.key});
+class FilterCars extends ConsumerStatefulWidget {
+  const FilterCars({super.key});
 
   @override
-  _LibraryFilterState createState() => _LibraryFilterState();
+  _FilterCarsState createState() => _FilterCarsState();
 }
 
-class _LibraryFilterState extends ConsumerState<LibraryFilter> {
+class _FilterCarsState extends ConsumerState<FilterCars> {
   final filterController = TextEditingController();
   FilterProperty selectedFilterProperty = FilterProperty.any;
 

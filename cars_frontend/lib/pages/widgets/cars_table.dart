@@ -8,8 +8,8 @@ import 'package:cars_frontend/controller/cars_list_state.dart';
 import 'package:cars_frontend/di.dart';
 import 'package:cars_frontend/pages/widgets/cars_data_table.dart';
 
-class LibraryTable extends ConsumerWidget {
-  const LibraryTable({super.key});
+class CarsTable extends ConsumerWidget {
+  const CarsTable({super.key});
 
   void downloadJson(List<Map<String, dynamic>> filteredData) async {
     final jsonData = jsonEncode(filteredData);
@@ -43,7 +43,7 @@ class LibraryTable extends ConsumerWidget {
       case LoadingState():
         return const Center(child: CircularProgressIndicator.adaptive());
       case SuccessState(list: var libraries):
-        return LibraryDataTable(libraries: libraries);
+        return CarsDataTable(libraries: libraries);
       case ErrorState(message: var errorMessage):
         return Text(
           errorMessage,

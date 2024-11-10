@@ -4,7 +4,7 @@ class Library {
   final String name;
   final String web;
   final int year;
-  final List<WorkingTime> model;
+  final List<CarsModel> model;
 
   const Library({
     required this.idmain,
@@ -23,7 +23,7 @@ class Library {
       web: json['Web_adresa'] as String,
       year: json['Godina_nastanka'] as int,
       model: (json['model'] as List<dynamic>)
-          .map((element) => WorkingTime.fromJson(element as Map<String, dynamic>))
+          .map((element) => CarsModel.fromJson(element as Map<String, dynamic>))
           .toList(),
     );
   }
@@ -38,7 +38,7 @@ class Library {
       };
 }
 
-class WorkingTime {
+class CarsModel {
   final int idmodel;
   final String model;
   final int snaga;
@@ -48,7 +48,7 @@ class WorkingTime {
   final int brojsjedecihmjesta;
   final int godinaproizvodnje;
 
-  const WorkingTime({
+  const CarsModel({
     required this.idmodel,
     required this.model,
     required this.snaga,
@@ -59,8 +59,8 @@ class WorkingTime {
     required this.godinaproizvodnje,
   });
 
-  factory WorkingTime.fromJson(Map<String, dynamic> json) {
-    return WorkingTime(
+  factory CarsModel.fromJson(Map<String, dynamic> json) {
+    return CarsModel(
       idmodel: json['ID_model'] as int,
       model: json['Model'] as String,
       snaga: json['Snaga'] as int,

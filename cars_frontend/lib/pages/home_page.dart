@@ -40,11 +40,11 @@ class HomePage extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    LibraryFilter(),
+                    FilterCars(),
                     SizedBox(height: 20),
                     DownloadButtons(),
                     SizedBox(height: 20),
-                    Expanded(child: LibraryTable()),
+                    Expanded(child: CarsTable()),
                   ],
                 ),
               ),

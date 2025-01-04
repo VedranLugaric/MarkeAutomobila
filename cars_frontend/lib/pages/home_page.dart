@@ -1,7 +1,8 @@
-import 'package:flutter/material.dart';
+import 'package:cars_frontend/controller/cars_data_download.dart';
 import 'package:cars_frontend/pages/widgets/cars_filter.dart';
 import 'package:cars_frontend/pages/widgets/cars_table.dart';
-import 'package:cars_frontend/controller/cars_data_download.dart';
+import 'package:flutter/material.dart';
+import 'package:cars_frontend/pages/input_page.dart'; // Import new page
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -34,6 +35,16 @@ class HomePage extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: Colors.black87,
                 ),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const InputPage()),
+                  );
+                },
+                child: Text('Dodaj podatke'),
               ),
               SizedBox(height: 20),
               Expanded(

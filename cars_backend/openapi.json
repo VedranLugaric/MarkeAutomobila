@@ -1,0 +1,303 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Marke Automobila API",
+    "version": "1.0.0",
+    "description": "API za pristup podacima o markama automobila",
+    "contact": {
+      "name": "API Support",
+      "email": "support@primjer.com"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "paths": {
+    "/libraries": {
+      "get": {
+        "summary": "Fetch all libraries",
+        "description": "Returns an array of all library documents",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Library"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Failed to fetch libraries"
+          }
+        }
+      },
+      "post": {
+        "summary": "Add a new item",
+        "description": "Creates a new item in the database",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "ID of the item to add"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Item created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Library"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Failed to create item"
+          }
+        }
+      }
+    },
+    "/libraries/{name}": {
+      "get": {
+        "summary": "Fetch libraries by name",
+        "description": "Returns an array of libraries that match the specified name",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Name of the library"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Library"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Failed to fetch libraries"
+          }
+        }
+      }
+    },
+    "/libraries/id/{id}": {
+      "get": {
+        "summary": "Fetch libraries by ID",
+        "description": "Returns an array of libraries that match the specified ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "ID of the library"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Library"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Failed to fetch libraries"
+          }
+        }
+      }
+    },
+    "/libraries/godinanastanka/{godina}": {
+      "get": {
+        "summary": "Fetch libraries by year of establishment",
+        "description": "Returns an array of libraries that match the specified year",
+        "parameters": [
+          {
+            "name": "godina",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Year of establishment"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Library"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Failed to fetch libraries"
+          }
+        }
+      }
+    },
+    "/libraries/mongoid/{id}": {
+      "get": {
+        "summary": "Fetch libraries by MongoDB ID",
+        "description": "Returns an array of libraries that match the specified MongoDB ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "MongoDB ID of the library"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Library"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Failed to fetch libraries"
+          }
+        }
+      }
+    },
+    "/libraries/update/{id}": {
+      "put": {
+        "summary": "Update an item",
+        "description": "Updates an existing item in the database",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "ID of the item to update"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Item updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Library"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Item not found"
+          },
+          "500": {
+            "description": "Failed to update item"
+          }
+        }
+      }
+    },
+    "/libraries/delete/{id}": {
+      "delete": {
+        "summary": "Delete an item",
+        "description": "Deletes an existing item from the database",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "ID of the item to delete"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Item deleted successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Library"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Item not found"
+          },
+          "500": {
+            "description": "Failed to delete item"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Library": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "Ime_proizvodjac": {
+            "type": "string"
+          },
+          "ID_proizvodjac": {
+            "type": "integer"
+          },
+          "Godina_nastanka": {
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}

@@ -10,7 +10,6 @@ app.use(cors());
 app.use(express.json());
 
 const mongoUrl = 'mongodb://user:password@mongodb:27017';
-
 const dbName = 'MarkeAutomobila';
 let db;
 console.log(`POKUSAVAMMMM`);
@@ -21,7 +20,6 @@ const wrapResponse = (data, message = 'Success') => ({
   data: data
 });
 
-// Connect to MongoDB
 async function connectToMongoDB() {
   console.log(`Povezujem se na BAZUUUUU`);
   const client = new MongoClient(mongoUrl);
@@ -33,7 +31,6 @@ async function connectToMongoDB() {
   console.log(libraries);
 }
 
-// Endpoint to fetch all libraries
 app.get('/libraries', async (req, res) => {
   try {
     const librariesCollection = db.collection('MarkeAutomobila');
@@ -100,7 +97,6 @@ app.get('/libraries/mongoid/:id', async (req, res) => {
   }
 });
 
-// POST endpoint to add a new item
 app.post('/libraries/add/:id', async (req, res) => {
   try {
     const librariesCollection = db.collection('MarkeAutomobila');
@@ -158,10 +154,13 @@ app.delete('/libraries/delete/:id', async (req, res) => {
   }
 });
 
-// Start the server
+app.get('/api-spec', (req, res) => {
+  res.sendFile(__dirname + '/openapi.json');
+});
+
+
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
 
-// Connect to MongoDB when the server starts
 connectToMongoDB().catch(error => console.error('Failed to connect to MongoDB:', error));

@@ -70,6 +70,7 @@ class InputPage extends StatelessWidget {
                     };
                 await apiClient.deleteData(field4Controller.text);
               },
+              
               child: Text('Gumb 3 - DELETE'),
             ),
           ],

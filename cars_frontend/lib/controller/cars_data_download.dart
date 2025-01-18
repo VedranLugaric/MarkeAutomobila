@@ -53,3 +53,34 @@ class DownloadButtons extends ConsumerWidget {
     );
   }
 }
+
+class DownloadButtonsOsvjezi extends ConsumerWidget {
+  const DownloadButtonsOsvjezi({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final libraryNotifier = ref.watch(libraryNotifierProvider.notifier);
+
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        ElevatedButton.icon(
+          onPressed: () {
+            libraryNotifier.downloadJsonFull();
+            libraryNotifier.downloadCsvFull();
+          },
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.yellowAccent,
+            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+            textStyle: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          icon: const Icon(Icons.download),
+          label: const Text("Preuzmi osvjezenje"),
+        ),
+      ],
+    );
+  }
+}

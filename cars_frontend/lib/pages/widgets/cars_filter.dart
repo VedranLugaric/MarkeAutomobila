@@ -19,7 +19,9 @@ class _FilterCarsState extends ConsumerState<FilterCars> {
   @override
   void initState() {
     super.initState();
+    // Use post-frame callback to ensure DOM is ready
     WidgetsBinding.instance.addPostFrameCallback((_) {
+      // This will be called after the widget tree has been built.
     html.document.getElementById('pretraga')?.setAttribute('id', 'pretraga');
     html.document.getElementById('atribu')?.setAttribute('id', 'atribut');
     html.document.getElementById('reset')?.setAttribute('id', 'reset');

@@ -38,7 +38,8 @@ class ApiClient {
   
 
   Future<void> postData(Map<String, dynamic> data) async {
-    await _httpClient.post("http://localhost:3000/libraries/add/:id", data: data);
+    final response = await _httpClient.post("http://localhost:3000/libraries/add/:id", data: data);
+    print(response.data['message']);
     print("Post api client");
   }
 

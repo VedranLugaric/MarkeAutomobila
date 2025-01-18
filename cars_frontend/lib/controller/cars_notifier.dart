@@ -3,9 +3,12 @@ import 'package:cars_frontend/api/api_client.dart';
 import 'package:cars_frontend/controller/cars_list_state.dart';
 import 'package:cars_frontend/di.dart';
 import 'dart:convert';
-import 'dart:html' as html;  // Potrebno za preuzimanje datoteka u Web aplikacijama
+import 'dart:html' as html;
+import 'package:http/http.dart' as http;  // Potrebno za preuzimanje datoteka u Web aplikacijama
 import 'package:csv/csv.dart';
 import 'package:cars_frontend/model/cars.dart';
+import 'package:flutter/material.dart';
+
 List<Library> preuzimanjePodaci = [];
 class LibraryNotifier extends Notifier<ListState> {
   late final ApiClient _apiClient;
@@ -75,47 +78,87 @@ class LibraryNotifier extends Notifier<ListState> {
     html.Url.revokeObjectUrl(url);
   }
 
-  void downloadJsonFull() {
-    print("Tu sam JSON download");
-    print(filtriraniPodaci);
-    final jsonData = jsonEncode(filtriraniPodaci.map((library) => library.toJson()).toList());  // Generiramo JSON samo od filtriranih podataka
-    final bytes = utf8.encode(jsonData);
-    final blob = html.Blob([bytes], 'application/json');
-    final url = html.Url.createObjectUrlFromBlob(blob);
-    final anchor = html.AnchorElement(href: url)
-      ..setAttribute("download", "filtered_data.json")  // Naziv datoteke
-      ..click();
-    html.Url.revokeObjectUrl(url);  // Oslobađamo URL
+  
+
+  
+
+  void downloadJsonFull() async {
+    try {
+      final response = await http.get(Uri.parse('http://localhost:3000/libraries'));
+      if (response.statusCode == 200) {
+        final List<dynamic> libraries = jsonDecode(response.body);
+        final jsonData = jsonEncode(libraries.map((library) => _addSchemaOrg(library)).toList());
+        final bytes = utf8.encode(jsonData);
+        final blob = html.Blob([bytes], 'application/json');
+        final url = html.Url.createObjectUrlFromBlob(blob);
+        final anchor = html.AnchorElement(href: url)
+          ..setAttribute("download", "filtered_data.json")
+          ..click();
+        html.Url.revokeObjectUrl(url);
+      } else {
+        print("Failed to fetch data from backend.");
+      }
+    } catch (e) {
+      print("Error: $e");
+    }
   }
 
-  // Preuzimanje filtriranih podataka kao CSV datoteke
-  void downloadCsvFull() {
-    print("Tu sam csv download");
-    print(filtriraniPodaci);
-    final csvData = const ListToCsvConverter().convert(
-      filtriraniPodaci.map((library) => [
-        library.name,
-        library.web,
-        library.year,
-        ...library.model.map((model) => [
-          model.model,
-          model.snaga,
-          model.duljina,
-          model.sirina,
-          model.visina,
-          model.brojsjedecihmjesta,
-          model.godinaproizvodnje
-        ]).expand((i) => i)
-      ]).toList()
-    );  // Pretvaramo filtrirane podatke u CSV format
-    final bytes = utf8.encode(csvData);
-    final blob = html.Blob([bytes], 'text/csv');
-    final url = html.Url.createObjectUrlFromBlob(blob);
-    final anchor = html.AnchorElement(href: url)
-      ..setAttribute("download", "filtered_data.csv")  // Naziv datoteke
-      ..click();
-    html.Url.revokeObjectUrl(url);
+  Map<String, dynamic> _addSchemaOrg(Map<String, dynamic> library) {
+    return {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": library['Ime_proizvodjac'],
+      "url": library['Web_adresa'],
+      "foundingDate": library['Godina_nastanka'],
+      "model": library['model'].map((model) => {
+        "@type": "Product",
+        "productID": model['ID_model'],
+        "name": model['Model'],
+        "additionalProperty": [
+          {"@type": "PropertyValue", "name": "Snaga", "value": model['Snaga']},
+          {"@type": "PropertyValue", "name": "Duljina", "value": model['Duljina']},
+          {"@type": "PropertyValue", "name": "Sirina", "value": model['Sirina']},
+          {"@type": "PropertyValue", "name": "Visina", "value": model['Visina']},
+          {"@type": "PropertyValue", "name": "Broj sjedecih mjesta", "value": model['Broj_sjedecih_mjesta']},
+          {"@type": "PropertyValue", "name": "Godina proizvodnje", "value": model['Godina_proizvodnje']}
+        ]
+      }).toList()
+    };
   }
+
+
+
+  // Preuzimanje filtriranih podataka kao CSV datoteke
+  void downloadCsvFull() async {
+    try {
+      final response = await http.get(Uri.parse('http://localhost:3000/libraries'));
+      if (response.statusCode == 200) {
+        final List<dynamic> libraries = jsonDecode(response.body);
+        final csvData = _generateCsv(libraries);
+        final bytes = utf8.encode(csvData);
+        final blob = html.Blob([bytes], 'text/csv');
+        final url = html.Url.createObjectUrlFromBlob(blob);
+        final anchor = html.AnchorElement(href: url)
+          ..setAttribute("download", "filtered_data.csv")
+          ..click();
+        html.Url.revokeObjectUrl(url);
+      } else {
+        print("Failed to fetch data from backend.");
+      }
+    } catch (e) {
+      print("Error: $e");
+    }
+  }
+
+  String _generateCsv(List<dynamic> data) {
+    final headers = data.first.keys.join(',');
+    final rows = data.map((library) {
+      final values = library.values.join(',');
+      return values;
+    }).join('\n');
+    return '$headers\n$rows';
+  }
+
 
   // Metoda za filtriranje podataka prema specificiranim kriterijima
   void filterData(final FilterProperty filter, final String query) async {
